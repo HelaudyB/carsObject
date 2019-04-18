@@ -8,6 +8,10 @@ class Audi extends Voiture {
         parent::__construct($marque, $model, $prix, $nbPortes, $clim, $siegeChauffant);
         $this->isQuatro = $isQuatro;
     }
+    public function __set($name, $value)
+    {
+        echo'toto';
+    }
 
     /**
      * @return mixed

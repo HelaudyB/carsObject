@@ -12,6 +12,10 @@ class Vehicule
         $this->model = $model;
         $this->prix = $prix;
     }
+    public function __set($name, $value)
+    {
+        echo'le __set marche';
+    }
 
     /**
      * @return mixed

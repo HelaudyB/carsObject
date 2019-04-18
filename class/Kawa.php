@@ -1,6 +1,6 @@
 <?php
 
-class Kawa extends Moto implements kawaInterface
+class Kawa extends Moto implements KawasakiInterface
 {
     private $isKawai;
 
@@ -8,6 +8,12 @@ class Kawa extends Moto implements kawaInterface
     {
         parent::__construct($marque, $model, $prix, $topCase);
         $this->isKawai= $isKawai;
+    }
+    public function __get($zeub)
+    {
+        ?><script language="javascript">
+        alert("ça marche");
+        </script> <?php
     }
 
     /**
