@@ -1,4 +1,5 @@
 <?php
+include "managerbdd.php";
 include 'interface/audiinterface.php';
 include "interface/animalinterface.php";
 include 'interface/vehiculeinterface.php';
@@ -20,3 +21,6 @@ include 'class/Moto.php';
 include 'class/Audi.php';
 include 'class/yamaha.php';
 include "class/Kawa.php";
+?>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+

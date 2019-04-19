@@ -1,37 +1,35 @@
 <?php
-class SessionManager {
-    private $attributs = [];
-    public function __construct()
+class sessionmanager{
+    private $attributs=[];
+
+    /**
+     * sessionmanager constructor.
+     * @param array $attributs
+     */
+    public function __construct(array $attributs)
     {
-        session_start();
-        foreach ($_SESSION as $key=>$value) {
-            $this->attributs[$key] = $value;
+        $this->attributs = $attributs;
+        foreach ($key[$attributs] as $qqch){
+            return $this;
         }
     }
-    public function __destruct()
+
+    /**
+     * @return array
+     */
+    public function getAttributs()
     {
-        foreach ($this->attributs as $key=>$value){
-            $_SESSION[$key] = $value;
-        }
-    }
-    public function getAttributs(){
         return $this->attributs;
     }
-    public function __set($name, $value)
+
+    /**
+     * @param array $attributs
+     */
+    public function setAttributs($attributs)
     {
-        $this->attributs[$name] = serialize($value);
+        $this->attributs = $attributs;
     }
-    public function __get($name)
-    {
-        return unserialize($this->attributs[$name]);
-    }
-    public function __isset($name)
-    {
-        return isset($this->attributs[$name]);
-    }
-    public function __unset($name)
-    {
-        unset($this->attributs[$name]);
-    }
+
+
+
 }
-?>

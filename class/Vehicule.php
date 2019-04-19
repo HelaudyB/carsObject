@@ -1,11 +1,9 @@
 <?php
-
-class Vehicule
+abstract class Vehicule implements VehiculeInterface
 {
     private $marque;
     private $model;
     private $prix;
-
     public function __construct($marque, $model, $prix)
     {
         $this->marque = $marque;
@@ -14,9 +12,12 @@ class Vehicule
     }
     public function __set($name, $value)
     {
-        echo'le __set marche';
+        var_dump('Impossible : Vous ne pouvez pas mettre la valeur '.$value.' dans '.$name);
     }
-
+    public function __get($name)
+    {
+        var_dump('Impossible l\'attribut ' . $name .' est privé ou nexiste pas');
+    }
     /**
      * @return mixed
      */
@@ -24,7 +25,6 @@ class Vehicule
     {
         return $this->marque;
     }
-
     /**
      * @param mixed $marque
      */
@@ -32,7 +32,6 @@ class Vehicule
     {
         $this->marque = $marque;
     }
-
     /**
      * @return mixed
      */
@@ -40,7 +39,6 @@ class Vehicule
     {
         return $this->model;
     }
-
     /**
      * @param mixed $model
      */
@@ -48,7 +46,6 @@ class Vehicule
     {
         $this->model = $model;
     }
-
     /**
      * @return mixed
      */
@@ -56,7 +53,6 @@ class Vehicule
     {
         return $this->prix;
     }
-
     /**
      * @param mixed $prix
      */
@@ -65,5 +61,3 @@ class Vehicule
         $this->prix = $prix;
     }
 }
-
-?>

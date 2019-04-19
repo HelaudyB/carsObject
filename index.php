@@ -1,5 +1,7 @@
 <?php
 include 'includeverything.php';
+
+
 //var_dump($newAnimal->getTaille());
 // echo $newAnimal;
 
@@ -13,8 +15,8 @@ include 'includeverything.php';
 
 $audiRS1 = new Audi('Audi', 'RS1', 100000, 5, 1, 1, 0);
 
-$voitureInconnu = new Voiture('Renault', 'Espace', 10000, 5, 0, 0);
-$vehiculeInconnu = new Vehicule('Renault', 'Tracteur', 100000);
+$voitureInconnu = new Audi('Renault', 'Espace', 10000, 5, 0, 0, false);
+$vehiculeInconnu = new Audi('Renault', 'Tracteur', 100000, 5, true, true, false);
 $yamaha = new Yamaha('yes', 'yes', 'yamaha', 'ZGH57', 'toierutoeriut','ioueiue');
 
 $Nala = new Chien('beaucoup', 'un peu', 'pas mal', 34, 3423);
@@ -41,3 +43,11 @@ $nouvelleKawasaki->marque= 'yamaha';
 
 $Otruche = new Chat(12, '16/20', 'oizeu', 'oijeroi', 'ilrutyreiuty', 'dluiyreiutye');
 var_dump($Otruche);
+
+// A mettre dans index.php
+$voiture = new Audi('renault', '4L', 3456,5, true, false, false);
+$voiture->persist();
+
+$voiture = new Audi('volkswagen', 'scirocco', 3,5, true, false, false);
+$voiture->persist();
+?>

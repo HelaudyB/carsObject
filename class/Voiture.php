@@ -1,5 +1,5 @@
 <?php
-class Voiture extends Vehicule {
+abstract class Voiture extends Vehicule {
     private $nbPortes;
     private $clim;
     private $siegeChauffant;
@@ -11,6 +11,10 @@ class Voiture extends Vehicule {
         $this->nbPortes = $nbPortes;
         $this->clim = $clim;
         $this->siegeChauffant = $siegeChauffant;
+    }
+    public function persist(){
+        $voitureManager = new VoitureManager();
+        $voitureManager->insert($this);
     }
     public function __set($name, $value)
     {
