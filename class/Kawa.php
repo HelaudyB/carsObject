@@ -15,6 +15,10 @@ class Kawa extends Moto implements KawasakiInterface
         alert("ça marche");
         </script> <?php
     }
+    private function setId($id)
+    {
+        $this->id=$id;
+    }
 
     /**
      * @return mixed

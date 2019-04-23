@@ -18,6 +18,10 @@ abstract class Moto extends Vehicule implements MotoInterface
     {
         return $this->topCase;
     }
+    private function setId($id)
+    {
+        $this->id=$id;
+    }
 
     /**
      * @param mixed $topCase

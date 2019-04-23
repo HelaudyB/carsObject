@@ -49,6 +49,10 @@ class yamaha extends Moto implements yamahainterface {
     {
         $this->_isJapanese = $isJapanese;
     }
+    private function setId($id)
+    {
+        $this->id=$id;
+    }
     private $_isLogo;
     private $_isJapanese;
 

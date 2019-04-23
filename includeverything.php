@@ -1,5 +1,7 @@
 <?php
-include "managerbdd.php";
+include "class/Connect.php";
+
+include "managervoiture.php";
 include 'interface/audiinterface.php';
 include "interface/animalinterface.php";
 include 'interface/vehiculeinterface.php';
@@ -10,6 +12,7 @@ include 'interface/yamahainterface.php';
 include "interface/KawasakiInterface.php";
 include "exception/motoexception.php";
 include "exception/voitureexception.php";
+
 include "class/session/sessionmanager.php";
 include 'class/animal.php';
 include 'class/felin.php';

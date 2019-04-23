@@ -1,7 +1,6 @@
 <?php
 include 'includeverything.php';
 
-
 //var_dump($newAnimal->getTaille());
 // echo $newAnimal;
 
@@ -50,4 +49,7 @@ $voiture->persist();
 
 $voiture = new Audi('volkswagen', 'scirocco', 3,5, true, false, false);
 $voiture->persist();
+
+$kawa = new Kawa('kawasaki', "eoiruze", 435, true, true);
+var_dump($kawa);
 ?>

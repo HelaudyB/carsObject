@@ -12,6 +12,10 @@ class Audi extends Voiture {
     {
         echo'toto';
     }
+    private function setId($id)
+    {
+        $this->id=$id;
+    }
 
     /**
      * @return mixed
@@ -27,6 +31,10 @@ class Audi extends Voiture {
     public function setIsQuatro($isQuatro)
     {
         $this->isQuatro = $isQuatro;
+    }
+    public function persist(){
+        $voitureManager = new VoitureManager();
+        $voitureManager->insert($voitureManager);
     }
 
 
