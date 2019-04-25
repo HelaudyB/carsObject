@@ -2,7 +2,7 @@
 class Connect
 {
     private $bdd = '';
-    public function __construct($connec_host = 'localhost', $connec_dbname = 'carsproject', $connec_pseudo = 'user', $connec_mdp = 'root')
+    public function __construct($connec_host = '127.0.0.1', $connec_dbname = 'carsproject', $connec_pseudo = 'user', $connec_mdp = 'root')
     {
         try {
             $this->bdd = new PDO('mysql:host='.$connec_host.';dbname='.$connec_dbname, $connec_pseudo, $connec_mdp);
